@@ -1,403 +1,344 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Block Puzzle Fusion</title>
-  <Link rel="shortcut icon" href ="512x512.png" type="image/x-icon">
-  <style>
-    @keyframes pop {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.3); }
-      100% { transform: scale(1); }
-    }
-
-    @keyframes flash {
-      0% { background-color: #f1c40f; }
-      100% { background-color: #fbfcfd; }
-    }
-
-    body {
-      font-family: sans-serif;
-      background: #003369;
-      margin: 0;
-      color: #3affd4;
-    }
-    .main-menu {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-    .main-menu button {
-      padding: 15px 30px;
-      font-size: 24px;
-      cursor: pointer;
-      background-color: #3affd4;
-      color: rgb(255, 255, 255);
-      border: none;
-      border-radius: 10px;
-    }
-    .main-menu button:hover {
-      background-color: #3affd4;
-    }
-    .game-container {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-    }
-    .score {
-      font-size: 24px;
-      margin-bottom: 7px;
-      font-weight: bold;
-    }
-    .best-score {
-      position: absolute;
-      top: -2px;
-      left: 733px;
-      font-size: 25px;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      color: gold;
-    }
-    .best-score span {
-      margin-left: 5px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(10, 30px);
-      grid-template-rows: repeat(10, 30px);
-      gap: 2px;
-      margin-bottom: 20px;
-    }
-    .cell {
-      width: 30px;
-      height: 30px;
-      background: #fbfcfd;
-      border: 1px solid #3affd4;
-      transition: background 0.2s;
-    }
-    .cell.filled {
-      animation: pop 0.3s ease;
-    }
-    .cell.clearing {
-      animation: flash 0.5s ease;
-    }
-    .blocks {
-      display: flex;
-      gap: 20px;
-      margin-bottom: 20px;
-    }
-    .block {
-      display: grid;
-      grid-template-columns: repeat(4, 20px);
-      grid-template-rows: repeat(4, 20px);
-      gap: 2px;
-      cursor: pointer;
-    }
-    .block-cell {
-      width: 20px;
-      height: 20px;
-      background: #003369;
-    }
-    .block-cell.active {
-      background: #3affd4;
-    }
-    .block.selected {
-      outline: 3px solid yellow;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      background-color: #3affd4;
-      color: white;
-      border: none;
-      border-radius: 5px;
-    }
-    button:hover {
-      background-color: #3affd4;
-    }
-    .game-over {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(0, 0, 0, 0.8);
-      color: white;
-      padding: 30px;
-      border-radius: 10px;
-      text-align: center;
-      font-size: 24px;
-      display: none;
-    }
-    .settings-menu {
-      position: absolute;
-      top: 10;
-      right: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .settings-panel {
-      display: none;
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      background: #001f3f;
-      color: white;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>SLAYFLIX</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="main-menu" id="mainMenu">
-    <img src="512x512.png" alt="" class="logo" />
-    <h1>Block Puzzle Fusion</h1>
-    <button onclick="startGame()">Jouer</button>
-  </div>
 
-  <div class="game-container" id="gameContainer">
-    <div class="">
-    
+   </head>
+       
+  <div class="page">
+    <h1 class="title">SLAYFILX</h1>
+    <NAV class="navigation">
+     
+    <div class="video-grid">
+
+      <!-- Vidéo 1 -->
+      <a href="videos/J'ai FINI TOUS les Circuits de Mario Kart World.mp4" class="video-card" target="_blank">
+        <div class="thumbnail">
+          <img src="thumbnails/MarioKartWorld.jpg" alt="miniature">
+          <span class="duration">27:47</span>
+        </div>
+        <div class="info">
+          <img src="avatars/jul.jpg" class="avatar" alt="avatar">
+          <div class="meta">
+            <h3 class="title">J'ai FINI TOUS les Circuits de Mario Kart World</h3>
+            <p class="channel">Julgane</p>
+            <p class="views">191 k vues • il y a 2 semaines</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Vidéo 2 -->
+      <a href="videos/L'ascension du plus grand Tricheur de Fortnite.mp4" class="video-card" target="_blank">
+        <div class="thumbnail">
+          <img src="thumbnails/peterbot.jpg" alt="miniature">
+          <span class="duration">35:03</span>
+        </div>
+        <div class="info">
+          <img src="avatars/maru.jpg" class="avatar" alt="avatar">
+          <div class="meta">
+            <h3 class="title">L'ascension du plus grand Tricheur de Fortnite</h3>
+            <p class="channel">maru</p>
+            <p class="views">456 k vues • il y a 1 mois</p>
+          </div>
+        </div>
+      </a>
+
+       <!-- Vidéo 3 -->
+       <a href="videos/JE DECOUVRE LES RIVIÈRES D’UN PARC AQUATIQUE !.mp4" class="video-card" target="_blank">
+        <div class="thumbnail">
+          <img src="thumbnails/RIV.png" alt="miniature">
+          <span class="duration">11:25</span>
+        </div>
+        <div class="info">
+          <img src="avatars/BouziTV.jpg" class="avatar" alt="avatar">
+          <div class="meta">
+            <h3 class="title">JE DECOUVRE LES RIVIÈRES D’UN PARC AQUATIQUE !</h3>
+            <p class="channel">BouziTV</p>
+            <p class="views">395 k vues • il y a 1 ans</p>
+          </div>
+        </div>
+      </a>
+
+
+      <!-- Vidéo 4 -->
+      <a href="videos/Qui sera le dernier survivant de La Secte (ft Mich.mp4" class="video-card" target="_blank">
+        <div class="thumbnail">
+          <img src="thumbnails/secte.jpg" alt="miniature">
+          <span class="duration">1:00:00</span>
+        </div>
+        <div class="info">
+          <img src="avatars/inoxtag.jpg" class="avatar" alt="avatar">
+          <div class="meta">
+            <h3 class="title">Qui sera le dernier survivant de La Secte ?</h3>
+            <p class="channel">inoxtag</p>
+            <p class="views">9,8 M vues • il y a 13 jours</p>
+          </div>
+        </div>
+      </a>
+
+       <!-- Vidéo 5 -->
+       <a href="videos/Qui tiendra le plus longtemps dans Toutatis, le gr.mp4" class="video-card" target="_blank">
+        <div class="thumbnail">
+          <img src="thumbnails/Toutatis.jpg" alt="miniature">
+          <span class="duration">55:41</span>
+        </div>
+        <div class="info">
+          <img src="avatars/mac.jpg" class="avatar" alt="avatar">
+          <div class="meta">
+            <h3 class="title">Qui tiendra le plus longtemps dans Toutatis ?</h3>
+            <p class="channel">Mcfly et Carlito</p>
+            <p class="views">6,8 M vues • il y a 1 ans</p>
+          </div>
+        </div>
+      </a>
+
+
+       <!-- Vidéo 6 -->
+      <a href="videos/SQUID GAME SAISON 2 SUR ROBLOX.mp4" class="video-card" target="_blank">
+        <div class="thumbnail">
+          <img src="thumbnails/SQUID GAME SAISON 2 SUR ROBLOX.jpg" alt="miniature">
+          <span class="duration">27:15</span>
+        </div>
+        <div class="info">
+          <img src="avatars/getk.jpg" class="avatar" alt="avatar">
+          <div class="meta">
+            <h3 class="title">SQUID GAME SAISON 2 SUR ROBLOX ! (Mise à jour)</h3>
+            <p class="channel">Guillaume & Kim</p>
+            <p class="views">27 k vues • il y a 5 mois</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Vidéo 7 -->
+      <a href="videos/Qui sera le dernier survivant .mp4" class="video-card" target="_blank">
+        <div class="thumbnail">
+          <img src="thumbnails/Qui sera le dernier survivant.jpg" alt="miniature">
+          <span class="duration">1:25:26</span>
+        </div>
+        <div class="info">
+          <img src="avatars/inoxtag.jpg" class="avatar" alt="avatar">
+          <div class="meta">
+            <h3 class="title">Qui sera le dernier survivant ? (ft Amine, Michou, Matt)</h3>
+            <p class="channel">inoxtag</p>
+            <p class="views">32 M vues • il y a 1 ans</p>
+          </div>
+        </div>
+      </a>
+      
+       <!-- Vidéo 8 -->
+      <a href="videos/je privatise encore un parc aqatique.mp4" class="video-card" target="_blank">
+        <div class="thumbnail">
+          <img src="thumbnails/maxresdefault.jpg" alt="miniature">
+          <span class="duration">13:25</span>
+        </div>
+        <div class="info">
+          <img src="avatars/bous.jpg" class="avatar" alt="avatar">
+          <div class="meta">
+            <h3 class="title">JE PRIVATISE ENCORE UN PARC AQUATIQUE !</h3>
+            <p class="channel">LeBouseuh</p>
+            <p class="views">946 k vues • il y a 1 ans</p>
+          </div>
+        </div>
+      </a>
+      
+       <!-- Vidéo 9 -->
+       <a href="videos/Le CLASH des consoles.mp4" class="video-card" target="_blank">
+        <div class="thumbnail">
+          <img src="thumbnails/xbox.png" alt="miniature">
+          <span class="duration">8:13</span>
+        </div>
+        <div class="info">
+          <img src="avatars/unnamed.jpg" class="avatar" alt="avatar">
+          <div class="meta">
+            <h3 class="title">Le CLASH des consoles</h3>
+            <p class="channel">Cyprien</p>
+            <p class="views">25 M vues • il y a 4 ans</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Vidéo 10 -->
+      <a href="videos/Qui Perdra son Job ! (ft. Byilhan, Nico).mp4" class="video-card" target="_blank">
+        <div class="thumbnail">
+          <img src="thumbnails/Qui Predra son job.jpg" alt="miniature">
+          <span class="duration">13:55</span>
+        </div>
+        <div class="info">
+          <img src="avatars/inoxtag.jpg" class="avatar" alt="avatar">
+          <div class="meta">
+            <h3 class="title">Qui Perdra son Job ! (ft. Byilhan, Nico)</h3>
+            <p class="channel">inoxtag</p>
+            <p class="views">5,5 M vues • il y a 2 mois</p>
+          </div>
+        </div>
+      </a>
+
+       <!-- Vidéo 11 -->
+       <a href="videos/LE MASHUP DES JEUX VIDÉO.mp4" class="video-card" target="_blank">
+        <div class="thumbnail">
+          <img src="thumbnails/ps5.png" alt="miniature">
+          <span class="duration">8:00</span>
+        </div>
+        <div class="info">
+          <img src="avatars/unnamed.jpg" class="avatar" alt="avatar">
+          <div class="meta">
+            <h3 class="title">LE MASHUP DES JEUX VIDÉO</h3>
+            <p class="channel">Cyprien</p>
+            <p class="views">5,4 M de vues • il y a 1 ans</p>
+          </div>
+        </div>
+      </a>
+
+       <!-- Vidéo 12 -->
+       <a href="videos/LES CLASH DES CONSOLES 2.mp4" class="video-card" target="_blank">
+        <div class="thumbnail">
+          <img src="thumbnails/switch2.png" alt="miniature">
+          <span class="duration">9:33</span>
+        </div>
+        <div class="info">
+          <img src="avatars/unnamed.jpg" class="avatar" alt="avatar">
+          <div class="meta">
+            <h3 class="title">LES CLASH DES CONSOLES 2</h3>
+            <p class="channel">Cyprien</p>
+            <p class="views">3 M de vues • il y a 2 semaines</p>
+          </div>
+        </div>
+      </a>
+
+       <!-- Vidéo 13 -->
+       <a href="videos/J ai joué un tournoi à 500 000 $ aux États-Unis.mp4" class="video-card" target="_blank">
+        <div class="thumbnail">
+          <img src="thumbnails/ProAM.jpg" alt="miniature">
+          <span class="duration">26:42</span>
+        </div>
+        <div class="info">
+          <img src="avatars/nikof.jpg" class="avatar" alt="avatar">
+          <div class="meta">
+            <h3 class="title">J'ai joué un tournoi à 500 000 $ aux États-Unis</h3>
+            <p class="channel">Nikof</p>
+            <p class="views">125 k de vues • il y a 1 mois</p>
+          </div>
+        </div>
+      </a>
+
+       <!-- Vidéo 14 -->
+       <a href="videos/SI LE PRÉSIDENT ÉTAIT YOUTUBEUR 2.mp4" class="video-card" target="_blank">
+        <div class="thumbnail">
+          <img src="thumbnails/Si le presodent.jpg" alt="miniature">
+          <span class="duration">13:04</span>
+        </div>
+        <div class="info">
+          <img src="avatars/unnamed.jpg" class="avatar" alt="avatar">
+          <div class="meta">
+            <h3 class="title">SI LE PRÉSIDENT ÉTAIT YOUTUBEUR 2</h3>
+            <p class="channel">Cyprien</p>
+            <p class="views">2,9 M de vues • il y a 3 mois</p>
+          </div>
+        </div>
+      </a>
+
+       <!-- Vidéo 15 -->
+       <a href="videos/J ai construit la pire attraction de tous les temps… (Planet Coaster).mp4" class="video-card" target="_blank">
+        <div class="thumbnail">
+          <img src="thumbnails/le pire parc.jpg" alt="miniature">
+          <span class="duration">8:50</span>
+        </div>
+        <div class="info">
+          <img src="avatars/Fiouze.jpg" class="avatar" alt="avatar">
+          <div class="meta">
+            <h3 class="title">J'ai construit la pire attraction de tous les temps… (Planet Coaster)</h3>
+            <p class="channel">Fiouze</p>
+            <p class="views">375 k de vues • il y a 1 ans</p>
+          </div>
+        </div>
+      </a>
+
+       <!-- Vidéo 16 -->
+       <a href="videos/SI LE PRÉSIDENT ÉTAIT YOUTUBEUR - CYPRIEN.mp4" class="video-card" target="_blank">
+         <div class="thumbnail">
+           <img src="thumbnails/si le prise1.jpg" alt="miniature">
+            <span class="duration">3:51</span>
+          </div>
+           <div class="info">
+              <img src="avatars/unnamed.jpg" class="avatar" alt="avatar">
+              <div class="meta">
+                <h3 class="title">SI LE PRÉSIDENT ÉTAIT YOUTUBEUR - CYPRIEN</h3>
+                <p class="channel">Cyprien</p>
+                <p class="views">23 M de vues • il y a 8 ans</p>
+              </div>
+            </div>
+          </a>
+
+       <!-- Vidéo 17 -->
+       <a href="videos/Je découvre le Canyoning ! J’ai sauté de 10m de haut pour la première fois de ma vie !.mp4" class="video-card" target="_blank">
+        <div class="thumbnail">
+          <img src="thumbnails/Saute.jpg" alt="miniature">
+           <span class="duration">17:17</span>
+         </div>
+          <div class="info">
+             <img src="avatars/inoxtag 2.0.jpg" class="avatar" alt="avatar">
+             <div class="meta">
+               <h3 class="title">Je découvre le Canyoning ! J’ai sauté de 10m de haut pour la première fois de ma vie !</h3>
+               <p class="channel">inoxtag 2.0</p>
+               <p class="views">2,7 M de vues • il y a 1 ans</p>
+             </div>
+           </div>
+         </a>
+
+       <!-- Vidéo 18 -->
+       <a href="videos/7 Jours Sur La Croisière à 80 000€ !.mp4" class="video-card" target="_blank">
+        <div class="thumbnail">
+          <img src="thumbnails/7 Jours Sur La Croisière à 80 000€ !.jpg" alt="miniature">
+           <span class="duration">41:57</span>
+         </div>
+          <div class="info">
+             <img src="avatars/pepechiken.jpg" class="avatar" alt="avatar">
+             <div class="meta">
+               <h3 class="title">7 Jours Sur La Croisière à 80 000€ !</h3>
+               <p class="channel">FastGoodCuisine</p>
+               <p class="views">2,4 M de vues • il y a 1 mois</p>
+             </div>
+           </div>
+         </a>
+
+       <!-- Vidéo 19 -->
+       <a href="videos/On affrronte Mastu et Hctuan sue Rocketleague !.mp4" class="video-card" target="_blank">
+        <div class="thumbnail">
+          <img src="thumbnails/On affronte Mastu.jpg" alt="miniature">
+           <span class="duration">26:24</span>
+         </div>
+          <div class="info">
+             <img src="avatars/inoxtag 2.0.jpg" class="avatar" alt="avatar">
+             <div class="meta">
+               <h3 class="title">On affronte Mastu et Hctuan sur Rocketleague avec Lebouseuh !</h3>
+               <p class="channel">inoxtag 2.0</p>
+               <p class="views">460 k de vues • il y a 2 ans</p>
+             </div>
+           </div>
+         </a>
+
+       <!-- Vidéo 20 -->
+       <a href="videos/J'ai mis Mario Galaxy dans MARIO ODYSSEY !.mp4" class="video-card" target="_blank">
+        <div class="thumbnail">
+          <img src="thumbnails/Mario Galaxy Dans Mario Odyssey.jpg" alt="miniature">
+           <span class="duration">13:59</span>
+         </div>
+          <div class="info">
+             <img src="avatars/jul.jpg" class="avatar" alt="avatar">
+             <div class="meta">
+               <h3 class="title">J'ai mis Mario Galaxy dans MARIO ODYSSEY !</h3>
+               <p class="channel">Julgane</p>
+               <p class="views">295 k de vues • il y a 3 ans</p>
+             </div>
+           </div>
+         </a>
+
     </div>
-    <div class="best-score">👑 <span id="bestScore">Best: 0</span></div>
-    <div class="score" id="score">Score: 0</div>
-    <div class="grid" id="grid"></div>
-    <div class="blocks" id="blocks"></div>
-    <button onclick="resetGame()">Réinitialiser</button>
   </div>
-
-  <div class="game-over" id="gameOver">
-    Partie terminée !<br/>
-    <button onclick="resetGame()">Rejouer</button>
-  </div>
-
-  <div class="settings-panel" id="settingsPanel">
-    <h3>Paramètres</h3>
-    <button onclick="toggleSound()" id="soundButton">Couper le son</button
-  </div>
-
-  <audio id="placeSound" src="https://www.myinstants.com/media/sounds/click.mp3"></audio>
-  <audio id="clearSound" src="https://www.myinstants.com/media/sounds/coin_1.mp3"></audio>
-  <audio id="gameOverSound" src="https://www.myinstants.com/media/sounds/sad-trombone.mp3"></audio>
-
-<script>
-    const grid = document.getElementById("grid");
-    const blocksContainer = document.getElementById("blocks");
-    const placeSound = document.getElementById("placeSound");
-    const clearSound = document.getElementById("clearSound");
-    const gameOverSound = document.getElementById("gameOverSound");
-    const scoreDisplay = document.getElementById("score");
-    const bestScoreDisplay = document.getElementById("bestScore");
-    const gameOverDisplay = document.getElementById("gameOver");
-    const gameContainer = document.getElementById("gameContainer");
-    const mainMenu = document.getElementById("mainMenu");
-    const soundBtn = document.getElementById("soundBtn");
-    const cells = [];
-    let selectedBlock = null;
-    let score = 0;
-    let bestScore = localStorage.getItem("bestScore") || 0;
-    let soundOn = true;
-    bestScoreDisplay.textContent = `Best: ${bestScore}`;
-
-    const blockShapes = [
-      [ [1, 1], [1, 1] ],
-      [ [1, 1, 1, 1] ],
-      [ [1, 0], [1, 0], [1, 1] ],
-      [ [0, 1], [0, 1], [1, 1] ],
-      [ [1, 1, 0], [0, 1, 1] ]
-    ];
-
-    function startGame() {
-      mainMenu.style.display = "none";
-      gameContainer.style.display = "flex";
-    }
-
-    function goHome() {
-      gameContainer.style.display = "none";
-      mainMenu.style.display = "flex";
-    }
-
-    function toggleSound() {
-      soundOn = !soundOn;
-      soundBtn.textContent = soundOn ? "🔊 Son: Activé" : "🔇 Son: Désactivé";
-    }
-
-    function playSound(sound) {
-      if (soundOn) {
-        sound.currentTime = 0;
-        sound.play();
-      }
-    }
-
-    function randomColor() {
-      const colors = ["#e74c3c", "#3498db", "#2ecc71", "#f1c40f", "#7f00ff"];
-      return colors[Math.floor(Math.random() * colors.length)];
-    }
-
-    function createGrid() {
-      for (let i = 0; i < 100; i++) {
-        const cell = document.createElement("div");
-        cell.classList.add("cell");
-        cell.addEventListener("click", () => placeBlock(i));
-        grid.appendChild(cell);
-        cells.push(cell);
-      }
-    }
-
-    function generateBlocks() {
-      blocksContainer.innerHTML = "";
-      let hasValid = false;
-
-      for (let i = 0; i < 3; i++) {
-        const shape = blockShapes[Math.floor(Math.random() * blockShapes.length)];
-        const color = randomColor();
-        const block = document.createElement("div");
-        block.classList.add("block");
-        const flat = [];
-        for (let y = 0; y < 4; y++) {
-          for (let x = 0; x < 4; x++) {
-            const cell = document.createElement("div");
-            cell.classList.add("block-cell");
-            if (shape[y]?.[x]) {
-              cell.classList.add("active");
-              cell.style.background = color;
-              flat.push({ x, y, color });
-            }
-            block.appendChild(cell);
-          }
-        }
-        block.dataset.shape = JSON.stringify(flat);
-        block.addEventListener("click", () => {
-          selectedBlock = flat;
-          Array.from(blocksContainer.children).forEach(b => b.classList.remove("selected"));
-          block.classList.add("selected");
-        });
-        blocksContainer.appendChild(block);
-
-        if (!hasValid && isBlockPlaceable(flat)) {
-          hasValid = true;
-        }
-      }
-
-      if (!hasValid) {
-        gameOver();
-      }
-    }
-
-    function isBlockPlaceable(block) {
-      for (let baseY = 0; baseY < 10; baseY++) {
-        for (let baseX = 0; baseX < 10; baseX++) {
-          if (canPlaceBlock(baseX, baseY, block)) {
-            return true;
-          }
-        }
-      }
-      return false;
-    }
-
-    function placeBlock(index) {
-      if (!selectedBlock) return;
-      const baseX = index % 10;
-      const baseY = Math.floor(index / 10);
-
-      if (canPlaceBlock(baseX, baseY, selectedBlock)) {
-        selectedBlock.forEach(({ x, y, color }) => {
-          const idx = (baseY + y) * 10 + (baseX + x);
-          cells[idx].classList.add("filled");
-          cells[idx].style.background = color;
-        });
-        playSound(placeSound);
-        score += 50;
-        updateScore();
-        selectedBlock = null;
-        Array.from(blocksContainer.children).forEach(b => b.classList.remove("selected"));
-        checkFullLines();
-        generateBlocks();
-      }
-    }
-
-    function canPlaceBlock(baseX, baseY, shape) {
-      return shape.every(({ x, y }) => {
-        const tx = baseX + x;
-        const ty = baseY + y;
-        if (tx < 0 || tx >= 10 || ty < 0 || ty >= 10) return false;
-        const idx = ty * 10 + tx;
-        return !cells[idx].classList.contains("filled");
-      });
-    }
-
-    function animateAndClear(line) {
-      line.forEach(cell => {
-        cell.classList.add("clearing");
-      });
-      setTimeout(() => {
-        line.forEach(cell => {
-          cell.classList.remove("filled", "clearing");
-          cell.style.background = "#fff";
-        });
-      }, 500);
-    }
-
-    function checkFullLines() {
-      let cleared = 0;
-      for (let row = 0; row < 10; row++) {
-        const line = cells.slice(row * 10, row * 10 + 10);
-        if (line.every(c => c.classList.contains("filled"))) {
-          animateAndClear(line);
-          playSound(clearSound);
-          cleared++;
-        }
-      }
-
-      for (let col = 0; col < 10; col++) {
-        const column = [];
-        for (let row = 0; row < 10; row++) {
-          column.push(cells[row * 10 + col]);
-        }
-        if (column.every(c => c.classList.contains("filled"))) {
-          animateAndClear(column);
-          playSound(clearSound);
-          cleared++;
-        }
-      }
-
-      if (cleared > 0) {
-        score += cleared * 850;
-        updateScore();
-      }
-    }
-
-    function updateScore() {
-      scoreDisplay.textContent = `Score: ${score}`;
-      if (score > bestScore) {
-        bestScore = score;
-        localStorage.setItem("bestScore", bestScore);
-        bestScoreDisplay.textContent = `Best: ${bestScore}`;
-      }
-    }
-
-    function resetGame() {
-      cells.forEach(cell => {
-        cell.classList.remove("filled", "clearing");
-        cell.style.background = "#fff";
-      });
-      score = 0;
-      updateScore();
-      gameOverDisplay.style.display = "none";
-      generateBlocks();
-    }
-
-    function gameOver() {
-      gameOverDisplay.style.display = "block";
-      playSound(gameOverSound);
-    }
-
-    createGrid();
-    generateBlocks();
-  </script>
 </body>
 </html>
